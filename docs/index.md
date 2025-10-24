@@ -61,30 +61,30 @@ title: YUI动漫社
     <div class="user-area">
       <button class="login-btn">登录</button>
     </div>
-  </header>
+  </header> <!-- 闭合navbar -->
 
   <!-- 主视觉区域 -->
-<section class="hero-section">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
       <!-- 角色展示 -->
       <div class="character-display">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761314746858-ozwyk0dc-img_mh4xbkn8_ubnt4q.png" 
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
              alt="社团形象角色" class="character-img">
-      </div>
-    <div class="image-showcase">
+      </div> <!-- 闭合character-display -->
+      
+      <!-- 三个图片容器 -->
+      <div class="image-showcase">
         <div class="image-card">
-          <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" alt="官方qq群" class="showcase-img">
-        </div>
+          <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" alt="官方qq群1" class="showcase-img">
+        </div> <!-- 闭合第一个image-card -->
         <div class="image-card">
           <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301462123-2m780dkg-img_mh4peyqh_s96r8t.jpg" alt="官方B站账号" class="showcase-img">
-        </div>
+        </div> <!-- 闭合第二个image-card -->
         <div class="image-card">
           <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301476772-ztijvwdf-img_mh4pfa1f_cblgb8.jpg" alt="官方社娘qq号" class="showcase-img">
-        </div>
-      </div>
-</section>
-
-    <div class="copyright">© 2025 YUI动漫社 版权所有</div>
-  </footer>
-</div>
+        </div> <!-- 闭合第三个image-card -->
+      </div> <!-- 闭合image-showcase -->
+    </div> <!-- 闭合hero-content -->
+  </section> <!-- 闭合hero-section -->
+</div> <!-- 闭合yui-community -->
