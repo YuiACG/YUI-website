@@ -6,7 +6,8 @@ title: YUI动漫社
   <!-- 导航栏 -->
   <header class="navbar">
     <div class="logo">
-      <img src="/logo.png" alt="YUI动漫社" class="logo-img">
+      <!-- 修正：使用正确的logo路径，避免SVG图标错误 -->
+      <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761233540764-nr0cx4dz-img_mh3kz15p_6904we.png" alt="YUI动漫社" class="logo-img">
     </div>
     
     <nav class="main-nav">
@@ -63,28 +64,28 @@ title: YUI动漫社
     </div>
   </header> <!-- 闭合navbar -->
 
-  <!-- 主视觉区域 -->
-  <section class="hero-section">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <!-- 角色展示 -->
-      <div class="character-display">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
-             alt="社团形象角色" class="character-img">
-      </div> <!-- 闭合character-display -->
-      
-      <!-- 三个图片容器 -->
-      <div class="image-showcase">
-        <div class="image-card">
-          <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" alt="官方qq群1" class="showcase-img">
-        </div> <!-- 闭合第一个image-card -->
-        <div class="image-card">
-          <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301462123-2m780dkg-img_mh4peyqh_s96r8t.jpg" alt="官方B站账号" class="showcase-img">
-        </div> <!-- 闭合第二个image-card -->
-        <div class="image-card">
-          <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301476772-ztijvwdf-img_mh4pfa1f_cblgb8.jpg" alt="官方社娘qq号" class="showcase-img">
-        </div> <!-- 闭合第三个image-card -->
-      </div> <!-- 闭合image-showcase -->
-    </div> <!-- 闭合hero-content -->
-  </section> <!-- 闭合hero-section -->
+  65 | 
+66 | <!-- 主视觉区域 -->
+67 | <section class="hero-section">
+68 |   <div class="hero-bg"></div>
+69 |   <div class="hero-content">
+70 |     <!-- 角色展示 -->
+71 |     <div class="character-display">
+72 |       <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" alt="社团形象角色" class="character-img">
+73 |     </div>
+74 |     <!-- 三个图片容器 -->
+75 |     <div class="image-showcase">
+76 |       <div class="image-card">
+77 |         <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" alt="官方qq群" class="showcase-img">
+78 |       </div>
+79 |       <div class="image-card">
+80 |         <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301462123-2m780dkg-img_mh4peyqh_s96r8t.jpg" alt="官方b站" class="showcase-img">
+81 |       </div>
+82 |       <div class="image-card">
+83 |         <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301476772-ztijvwdf-img_mh4pfa1f_cblgb8.jpg" alt="官方社娘" class="showcase-img">
+84 |       </div>
+85 |     </div>
+86 |   </div>
+87 | </section>
 </div> <!-- 闭合yui-community -->
+
