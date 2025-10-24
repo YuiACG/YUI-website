@@ -1,22 +1,29 @@
 /* 1. 全局全屏背景（保持充满网页） */
+/* 1. 强制背景图显示，避免被覆盖 */
 body {
-  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761288116445-tf53erp2-img_mh4hgqd1_nl04rt.png'); /* 全屏背景图路径 */
-  background-size: cover; /* 背景充满视口 */
-  background-position: center center; /* 背景居中 */
-  background-attachment: fixed; /* 背景固定，不随滚动移动 */
-  background-repeat: no-repeat; /* 背景不重复 */
-  min-height: 100vh; /* 确保body占满屏幕高度 */
-  margin: 0;
-  padding: 0;
+  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761314728097-qoiiped0-img_mh4xb9vr_5ax1rm.png') !important;
+  background-color: transparent !important; /* 清除默认黑色背景 */
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* 内容容器半透明遮罩（保障文字可读性，不影响背景） */
+/* 2. 降低内容容器遮罩透明度，避免遮挡背景 */
 .yui-community {
-  background-color: rgba(10, 10, 22, 0.7); /* 黑色半透明遮罩 */
+  /* 透明度从 0.7 改为 0.3，背景图更明显；若仍黑，可设为 0 */
+  background-color: rgba(10, 10, 22, 0.3) !important;
   min-height: 100vh;
   width: 100%;
-  padding: 0;
-  margin: 0;
+}
+
+/* 3. 确保主视觉区域无额外背景遮挡 */
+.hero-section {
+  background: none !important; /* 彻底取消区域自身背景 */
+  min-height: calc(100vh - 60px);
 }
 
 /* 2. 导航栏样式（在背景之上，不遮挡） */
@@ -27,16 +34,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* 3. 主视觉区域布局（适配全屏背景，不额外加背景） */
-.hero-section {
-  background: none !important; /* 取消区域自身背景，用全局背景 */
-  min-height: calc(100vh - 60px); /* 减去导航栏高度，占满剩余屏幕 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  gap: 3rem; /* 角色图与展示图区域间距 */
-}
+
 
 /* 4. 角色图片容器（自适应图片大小） */
 .character-display {
