@@ -1,96 +1,27 @@
-/* 全局全屏背景（保持不变） */
-body {
-  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761288116445-tf53erp2-img_mh4hgqd1_nl04rt.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-attachment: fixed !important;
-  background-repeat: no-repeat !important;
-  min-height: 100vh !important;
+/* 仅保留必要样式，避免冲突 */
+* {
   margin: 0;
   padding: 0;
-  background-color: transparent !important;
+  box-sizing: border-box;
 }
 
-.yui-community {
-  background-color: rgba(10, 10, 22, 0.3) !important;
-  min-height: 100vh;
-  width: 100%;
-}
-
-/* 导航栏样式（保持不变） */
+/* 导航栏样式 */
 .VPNav {
-  position: relative;
-  z-index: 100;
   background: rgba(10, 10, 22, 0.8) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100 !important;
 }
 
-/* 主视觉区域布局 */
-.hero-section {
-  background: none !important;
-  min-height: calc(100vh - 60px);
-  display: flex;
-  align-items: center; /* 垂直居中对齐 */
-  justify-content: center;
-  padding: 2rem;
-  gap: 4rem; /* 角色图与展示图区域间距加大 */
-  flex-wrap: wrap; /* 小屏幕自动换行 */
+.VPNavItem a {
+  color: #e0e0e0 !important;
 }
 
-/* 角色展示图放大4倍（核心调整） */
-.character-display {
-  /* 原始尺寸放大4倍（基于图片自身大小） */
-  transform: scale(4); 
-  /* 放大后可能超出布局，添加定位控制位置 */
-  position: relative;
-  /* 调整位置，避免偏移出屏幕（根据实际图片大小微调） */
-  left: 0; 
-  top: 0;
-  /* 确保放大后不被遮挡 */
-  z-index: 10;
-  /* 预留足够空间，避免挤压其他元素 */
-  margin: 200px 0; /* 上下预留空间，根据放大后的实际高度调整 */
+.VPNavItem a:hover {
+  color: #61dafb !important;
 }
 
-.character-img {
-  /* 保持图片原始比例，不拉伸 */
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  /* 可选：添加边框增强视觉 */
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-}
-
-/* 三个图片容器：按各自图片尺寸显示（无需统一大小） */
-.image-showcase {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* 小屏幕换行 */
-  /* 避免被角色图挤压，单独占一行（可选） */
-  width: 100%;
-}
-
+/* 图片悬停效果 */
 .image-card {
-  /* 完全由图片自身尺寸决定容器大小 */
-  width: auto;
-  height: auto;
-  /* 不限制最大尺寸，完全自适应图片 */
-  max-width: none;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
-}
-
-.showcase-img {
-  /* 图片显示原始尺寸，不拉伸、不裁剪 */
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
 }
 
 .image-card:hover {
