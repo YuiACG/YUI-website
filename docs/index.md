@@ -64,17 +64,15 @@ title: YUI动漫社
   </header>
 
   <!-- 主视觉区域 -->
-  <section class="hero-section">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
+<section class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
       <!-- 角色展示 -->
       <div class="character-display">
         <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761314746858-ozwyk0dc-img_mh4xbkn8_ubnt4q.png" 
              alt="社团形象角色" class="character-img">
       </div>
-      
-      <!-- 三个图片容器 -->
-      <div class="image-showcase">
+    <div class="image-showcase">
         <div class="image-card">
           <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" alt="官方qq群" class="showcase-img">
         </div>
@@ -85,8 +83,7 @@ title: YUI动漫社
           <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301476772-ztijvwdf-img_mh4pfa1f_cblgb8.jpg" alt="官方社娘qq号" class="showcase-img">
         </div>
       </div>
-    </div>
-  </section>
+</section>
 
     <div class="copyright">© 2025 YUI动漫社 版权所有</div>
   </footer>
