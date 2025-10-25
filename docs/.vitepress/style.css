@@ -47,15 +47,15 @@
 
 /* Logo图片放大两倍（原尺寸约24px → 96px） */
 #app .VPNav .logo img {
-  width: 96px !important;
-  height: 96px !important;
+  width: 200px !important;
+  height: 200px !important;
   min-width: 96px !important; /* 防止被压缩 */
   object-fit: contain !important; /* 保持图片比例 */
 }
 
 /* Logo文字放大两倍（原约14px → 56px） */
 #app .VPNav .logo span {
-  font-size: 56px !important;
+  font-size: 80px !important;
   font-weight: bold !important;
   color: #ffffff !important; /* 白色文字，与背景对比 */
   line-height: 1 !important; /* 避免文字上下溢出 */
@@ -72,7 +72,7 @@
 /* 导航菜单项文字放大两倍（原约14px → 28px） */
 #app .VPNav .nav-menu .VPNavItem,
 #app .VPNav .nav-menu .VPNavItem a {
-  font-size: 28px !important;
+  font-size: 40px !important;
   color: #ffffff !important;
   padding: 0.8rem 0 !important; /* 增加上下内边距，提升点击区域 */
   white-space: nowrap !important; /* 防止文字换行 */
@@ -83,7 +83,7 @@
 #app .VPNav .nav-menu .VPNavItem:hover,
 #app .VPNav .nav-menu .VPNavItem a:hover {
   color: #f0f0f0 !important;
-  transform: scale(1.05) !important; /* 轻微放大，增强交互 */
+  transform: scale(2) !important; /* 轻微放大，增强交互 */
 }
 
 /* 下拉菜单样式（同步放大） */
