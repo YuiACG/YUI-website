@@ -3,93 +3,111 @@
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
+  border: none !important;
+  background: none !important;
+  outline: none !important;
 }
 
-/* 核心容器透明 */
-.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
+/* 核心容器透明及禁止滚动 */
+#app .VPApp, 
+#app .VPContent, 
+#app .VPDoc, 
+#app .VPHome, 
+#app .VPLayout {
   background: transparent !important;
   overflow: hidden !important;
 }
 
-/* 导航栏整体样式（强制覆盖） */
+/* 导航栏整体样式（放大后适配） */
 #app .VPNav {
-  background: rgba(0, 0, 0, 0.5) !important; /* 加深背景，提升文字对比度 */
-  height: 90px !important; /* 增高导航栏，避免内容拥挤 */
-  padding: 0 2rem !important;
+  background: rgba(0, 0, 0, 0.5) !important; /* 半透明背景，提升文字可读性 */
+  height: 120px !important; /* 增高导航栏，适配放大内容 */
+  padding: 0 3rem !important; /* 增加左右边距，避免边缘拥挤 */
   display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  align-items: center !important; /* 垂直居中内容 */
+  justify-content: center !important; /* 水平居中整体 */
 }
 
-/* 导航栏容器（居中布局） */
+/* 导航栏容器布局 */
 #app .VPNav .container {
   width: 100% !important;
-  max-width: 1600px !important; /* 适配宽屏 */
+  max-width: 1800px !important; /* 适配宽屏，避免内容挤压 */
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: space-between !important; /* Logo居左，菜单居中，按钮居右 */
+  gap: 2rem !important; /* 元素间间距 */
 }
 
-/* Logo区域（放大） */
+/* Logo区域（图片+文字） */
 #app .VPNav .logo {
   display: flex !important;
   align-items: center !important;
-  gap: 12px !important; /* Logo与文字间距 */
+  gap: 16px !important; /* Logo图片与文字间距 */
 }
 
-/* Logo图片放大（强制覆盖默认尺寸） */
+/* Logo图片放大两倍（原尺寸约24px → 96px） */
 #app .VPNav .logo img {
-  width: 50px !important; /* 比之前再放大，确保可见 */
-  height: 50px !important;
-  min-width: 50px !important; /* 防止被压缩 */
-  object-fit: contain !important;
+  width: 96px !important;
+  height: 96px !important;
+  min-width: 96px !important; /* 防止被压缩 */
+  object-fit: contain !important; /* 保持图片比例 */
 }
 
-/* Logo文字（社团名称）放大 */
+/* Logo文字放大两倍（原约14px → 56px） */
 #app .VPNav .logo span {
-  font-size: 28px !important; /* 明显放大 */
+  font-size: 56px !important;
   font-weight: bold !important;
-  color: #ffffff !important; /* 白色文字更醒目 */
-  line-height: 1 !important;
+  color: #ffffff !important; /* 白色文字，与背景对比 */
+  line-height: 1 !important; /* 避免文字上下溢出 */
+  white-space: nowrap !important; /* 防止文字换行 */
 }
 
-/* 导航菜单（居中区域） */
+/* 导航菜单容器（居中） */
 #app .VPNav .nav-menu {
   display: flex !important;
-  gap: 2.5rem !important; /* 增大菜单项间距 */
-  margin: 0 auto !important; /* 强制居中 */
+  gap: 3rem !important; /* 菜单项间距增大，适配大文字 */
+  margin: 0 auto !important; /* 强制菜单居中 */
 }
 
-/* 导航菜单项文字放大 */
+/* 导航菜单项文字放大两倍（原约14px → 28px） */
 #app .VPNav .nav-menu .VPNavItem,
 #app .VPNav .nav-menu .VPNavItem a {
-  font-size: 20px !important; /* 菜单文字放大 */
+  font-size: 28px !important;
   color: #ffffff !important;
-  padding: 0.5rem 0 !important;
+  padding: 0.8rem 0 !important; /* 增加上下内边距，提升点击区域 */
+  white-space: nowrap !important; /* 防止文字换行 */
   font-weight: 500 !important;
 }
 
-/* 下拉菜单样式（可选，保持与主菜单一致） */
+/* 菜单项 hover 效果 */
+#app .VPNav .nav-menu .VPNavItem:hover,
+#app .VPNav .nav-menu .VPNavItem a:hover {
+  color: #f0f0f0 !important;
+  transform: scale(1.05) !important; /* 轻微放大，增强交互 */
+}
+
+/* 下拉菜单样式（同步放大） */
 #app .VPNavDropdown .dropdown-menu {
-  background: rgba(0, 0, 0, 0.8) !important;
-  padding: 0.5rem 0 !important;
+  background: rgba(0, 0, 0, 0.8) !important; /* 深色背景，提升可读性 */
+  padding: 0.8rem 0 !important;
+  margin-top: 0.5rem !important; /* 与主菜单保持距离 */
 }
 
 #app .VPNavDropdown .dropdown-menu .VPNavItem {
-  font-size: 18px !important;
-  padding: 0.5rem 1.5rem !important;
+  font-size: 24px !important; /* 下拉项稍小于主菜单，保持层级 */
+  padding: 0.8rem 1.5rem !important;
 }
 
-/* 右侧开关按钮区域 */
+/* 右侧功能按钮区域（适配大导航栏） */
 #app .VPNav .nav-actions {
   display: flex !important;
   align-items: center !important;
-  gap: 1rem !important;
+  gap: 1.5rem !important;
 }
 
-/* 角色图浮动动画（保持） */
+/* 角色图浮动动画 */
 .character-display {
-  animation: characterFloat 6s ease-in-out infinite;
+  animation: characterFloat 6s ease-in-out infinite !important;
 }
 
 @keyframes characterFloat {
@@ -100,7 +118,13 @@
   100% { transform: scale(0.5) translateY(0px) rotate(0deg); }
 }
 
-/* 图片卡片悬停效果 */
+/* 角色图悬停效果 */
+.character-display:hover {
+  animation-play-state: paused !important;
+  transform: scale(0.52) !important; /* 轻微放大，突出交互 */
+}
+
+/* 下方图片卡片悬停效果 */
 .image-card:hover {
   transform: translateY(-5px) !important;
 }
