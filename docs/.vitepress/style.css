@@ -1,98 +1,56 @@
+/* 清除所有元素的默认边框和透明背景 */
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  background: none !important; /* 清除默认背景 */
+  outline: none !important; /* 清除聚焦边框 */
+}
+
+/* 确保VitePress组件无残留背景 */
+.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout,
+.VPNav, .VPNavItem, .VPNavMenu {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 清除图片容器可能的透明边框 */
+.character-display, .image-showcase, .image-card {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* 图片本身无任何边框 */
+img {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  outline: none !important;
+}
 /* 全局样式重置 */
 * {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
   border: none !important;
-  background: none !important;
-  outline: none !important;
 }
 
-/* 核心容器透明 */
+/* 清除VitePress默认样式干扰 */
 .VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
   background: transparent !important;
   overflow: hidden !important;
 }
 
-/* 导航栏整体样式 */
+/* 导航栏样式 */
 .VPNav {
-  background: rgba(0, 0, 0, 0.3) !important; /* 半透明背景 */
+  background: rgba(0, 0, 0, 0.3) !important;
   z-index: 100 !important;
-  height: 80px !important; /* 增高导航栏，适配放大后的内容 */
-  display: flex !important;
-  align-items: center !important; /* 垂直居中内容 */
-  justify-content: center !important; /* 水平居中整体内容 */
-  padding: 0 2rem !important;
 }
 
-/* 导航栏容器居中 */
-.VPNav .container {
-  width: 100% !important;
-  max-width: 1400px !important; /* 限制最大宽度，避免过宽 */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important; /*  logo和菜单分别居左右，中间留白 */
-}
-
-/* 左上角Logo和文字放大 */
-.VPNav .logo {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-}
-
-/* Logo图片放大 */
-.VPNav .logo img {
-  width: 40px !important; /* 原尺寸基础上放大约1.5倍 */
-  height: 40px !important;
-}
-
-/* Logo文字放大 */
-.VPNav .logo span {
-  font-size: 24px !important; /* 文字放大到合适大小 */
-  font-weight: bold !important;
-  color: #fff !important; /* 确保文字清晰可见 */
-}
-
-/* 导航菜单居中及字体放大 */
-.VPNav .nav-menu {
-  display: flex !important;
-  gap: 2rem !important; /* 增大菜单项间距 */
-  margin: 0 auto !important; /* 强制菜单居中 */
-}
-
-/* 导航菜单项样式 */
-.VPNav .nav-menu .VPNavItem {
-  font-size: 18px !important; /* 菜单字体放大 */
-  color: #fff !important;
-  padding: 0.5rem 0 !important;
-}
-
-/* 菜单项 hover 效果 */
-.VPNav .nav-menu .VPNavItem:hover {
-  color: #f0f0f0 !important;
-  transform: scale(1.05) !important;
-}
-
-/* 右侧开关按钮区域 */
-.VPNav .nav-actions {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* 角色图和图片卡片样式保持不变 */
-.character-display {
-  animation: characterFloat 6s ease-in-out infinite;
-}
-
-@keyframes characterFloat {
-  0% { transform: scale(0.5) translateY(0px) rotate(0deg); }
-  25% { transform: scale(0.5) translateY(-8px) rotate(1deg); }
-  50% { transform: scale(0.5) translateY(0px) rotate(0deg); }
-  75% { transform: scale(0.5) translateY(8px) rotate(-1deg); }
-  100% { transform: scale(0.5) translateY(0px) rotate(0deg); }
-}
-
+/* 图片卡片悬停效果 */
 .image-card:hover {
   transform: translateY(-5px) !important;
 }
