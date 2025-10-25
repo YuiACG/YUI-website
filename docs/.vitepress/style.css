@@ -1,4 +1,4 @@
-/* 全局样式重置，清除默认干扰 */
+/* 全局样式重置 */
 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -7,149 +7,20 @@
   outline: none !important;
 }
 
-/* 导航栏整体高度适配放大后的内容 */
-#app .VPNav {
-  height: 140px !important; /* 增高导航栏高度，避免文字溢出 */
-  background: rgba(0, 0, 0, 0.6) !important; /* 加深背景，提升文字对比度 */
-  padding: 0 40px !important;
+/* 核心容器透明 */
+.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
+  background: transparent !important;
+  overflow: hidden !important;
+}
+
+/* 导航栏容器居中 */
+.VPNav .container {
   display: flex !important;
-  align-items: center !important;
   justify-content: center !important;
-  position: relative !important;
+  gap: 30px !important;
+}
+
+/* 确保导航栏样式不被主题覆盖 */
+.VPNav {
   z-index: 999 !important;
-}
-
-/* 导航栏容器居中布局 */
-#app .VPNav .container {
-  width: 100% !important;
-  max-width: 1800px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important; /* 强制内容整体居中 */
-  gap: 40px !important; /* 元素间间距放大 */
-}
-
-/* 1. Logo文字（YUI动漫社）放大2倍 */
-#app .VPNav .logo {
-  display: flex !important;
-  align-items: center !important;
-  gap: 15px !important;
-}
-
-#app .VPNav .logo span {
-  font-size: 48px !important; /* 原默认约24px，放大2倍 */
-  font-weight: bold !important;
-  color: #ffffff !important;
-  white-space: nowrap !important; /* 防止文字换行 */
-  line-height: 1 !important;
-}
-
-/* Logo图片同步放大，与文字比例协调 */
-#app .VPNav .logo img {
-  width: 70px !important; /* 原默认约35px，放大2倍 */
-  height: 70px !important;
-  object-fit: contain !important;
-}
-
-/* 2. 一级菜单项（首页等）文字放大2倍 */
-#app .VPNav .nav-menu {
-  display: flex !important;
-  gap: 40px !important; /* 菜单项间距放大 */
-  margin: 0 !important;
-}
-
-#app .VPNav .nav-menu .VPNavItem {
-  position: relative !important;
-}
-
-#app .VPNav .nav-menu .VPNavItem a,
-#app .VPNav .nav-menu .VPNavItem span {
-  font-size: 32px !important; /* 原默认约16px，放大2倍 */
-  color: #ffffff !important;
-  padding: 10px 0 !important;
-  white-space: nowrap !important;
-  font-weight: 500 !important;
-}
-
-/* 3. 下拉菜单文字放大2倍 */
-#app .VPNavDropdown .dropdown-menu {
-  background: rgba(0, 0, 0, 0.8) !important; /* 深色背景，确保文字可见 */
-  padding: 15px 0 !important;
-  min-width: 260px !important; /* 适配大文字宽度 */
-  margin-top: 10px !important;
-  border-radius: 8px !important;
-}
-
-#app .VPNavDropdown .dropdown-menu .VPNavItem a,
-#app .VPNavDropdown .dropdown-menu .VPNavItem span {
-  font-size: 28px !important; /* 原默认约14px，放大2倍 */
-  color: #ffffff !important;
-  padding: 12px 25px !important; /* 增大点击区域 */
-  display: block !important;
-}
-
-/* 下拉菜单项hover效果 */
-#app .VPNavDropdown .dropdown-menu .VPNavItem:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-}
-
-/* 一级菜单项hover效果 */
-#app .VPNav .nav-menu .VPNavItem:hover a,
-#app .VPNav .nav-menu .VPNavItem:hover span {
-  color: #f0f0f0 !important;
-  transform: scale(1.05) !important;
-  display: inline-block !important;
-}
-
-/* 右侧功能按钮区域适配 */
-#app .VPNav .nav-actions {
-  display: flex !important;
-  align-items: center !important;
-  gap: 20px !important;
-}
-
-/* 角色图浮动动画（保持） */
-.character-display {
-  animation: characterFloat 6s ease-in-out infinite !important;
-}
-
-@keyframes characterFloat {
-  0% { transform: scale(0.5) translateY(0px) rotate(0deg); }
-  25% { transform: scale(0.5) translateY(-8px) rotate(1deg); }
-  50% { transform: scale(0.5) translateY(0px) rotate(0deg); }
-  75% { transform: scale(0.5) translateY(8px) rotate(-1deg); }
-  100% { transform: scale(0.5) translateY(0px) rotate(0deg); }
-}
-
-.character-display:hover {
-  animation-play-state: paused !important;
-  transform: scale(0.52) !important;
-}
-
-/* 下方图片卡片悬停效果 */
-.image-card:hover {
-  transform: translateY(-5px) !important;
-}
-/* 强制修改导航栏所有文字大小 */
-:root .VPNav .logo span {
-  font-size: 48px !important; /* YUI动漫社 放大2倍 */
-  color: #fff !important;
-}
-
-:root .VPNav .nav-menu .VPNavItem a,
-:root .VPNav .nav-menu .VPNavItem span {
-  font-size: 32px !important; /* 首页等一级菜单 放大2倍 */
-  color: #fff !important;
-}
-
-:root .VPNavDropdown .dropdown-menu .VPNavItem a,
-:root .VPNavDropdown .dropdown-menu .VPNavItem span {
-  font-size: 28px !important; /* 下拉菜单 放大2倍 */
-  color: #fff !important;
-}
-
-/* 导航栏高度适配 */
-:root .VPNav {
-  height: 140px !important;
-  background: rgba(0,0,0,0.6) !important;
 }
