@@ -58,7 +58,6 @@ export default defineConfig({
           { text: '往期社刊', link: '/shekan/archive' }
         ]
       },
-      
     ],
     
     // 禁用侧边栏（首页不需要）

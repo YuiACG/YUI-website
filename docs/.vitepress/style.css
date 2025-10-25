@@ -1,24 +1,32 @@
-/* 全局样式重置 */
+/* 清除所有元素的默认边框和透明背景 */
 * {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
   border: none !important;
+  background: none !important; /* 清除默认背景 */
+  outline: none !important; /* 清除聚焦边框 */
 }
 
-/* 清除VitePress默认样式干扰 */
-.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
+/* 确保VitePress组件无残留背景 */
+.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout,
+.VPNav, .VPNavItem, .VPNavMenu {
   background: transparent !important;
-  overflow: hidden !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* 导航栏样式 */
-.VPNav {
-  background: rgba(0, 0, 0, 0.3) !important;
-  z-index: 100 !important;
+/* 清除图片容器可能的透明边框 */
+.character-display, .image-showcase, .image-card {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
 }
 
-/* 图片卡片悬停效果 */
-.image-card:hover {
-  transform: translateY(-5px) !important;
+/* 图片本身无任何边框 */
+img {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  outline: none !important;
 }
