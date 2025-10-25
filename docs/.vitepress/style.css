@@ -1,29 +1,39 @@
-/* 全局样式重置 */
+/* 全局样式重置（确保无默认边框） */
 * {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
+  border: none !important; /* 全局禁用默认边框 */
 }
 
 /* 强制VitePress核心组件透明 */
 .VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
   background: transparent !important;
-  border: none !important;
 }
 
 /* 导航栏样式 */
 .VPNav {
   background: rgba(0, 0, 0, 0.5) !important;
-  z-index: 100 !important; /* 确保导航栏在最上层 */
+  z-index: 100 !important;
 }
 
-/* 角色图悬浮效果 */
+/* 角色图浮动动画 */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(10px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* 角色图悬停效果 */
 .character-display:hover {
-  transform: translateY(-10px) !important;
+  animation-play-state: paused;
+  transform: scale(1.02) !important;
 }
 
 .character-display:hover img {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* 图片卡片悬停效果 */
