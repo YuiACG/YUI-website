@@ -1,4 +1,4 @@
-/* 全局样式重置，确保无滚动和默认边框 */
+/* 全局样式重置 */
 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -6,19 +6,19 @@
   border: none !important;
 }
 
-/* 清除VitePress默认滚动和背景干扰 */
+/* 清除VitePress默认样式干扰 */
 .VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
   background: transparent !important;
-  overflow: hidden !important; /* 禁止主题自带滚动 */
+  overflow: hidden !important;
 }
 
-/* 导航栏固定显示，不遮挡内容 */
+/* 导航栏样式 */
 .VPNav {
   background: rgba(0, 0, 0, 0.3) !important;
-  z-index: 100 !important; /* 导航栏层级最高，确保可见 */
+  z-index: 100 !important;
 }
 
-/* 图片卡片悬停效果（保留交互） */
+/* 图片卡片悬停效果 */
 .image-card:hover {
   transform: translateY(-5px) !important;
 }
