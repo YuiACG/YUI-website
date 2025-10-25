@@ -25,11 +25,11 @@ title: YUI动漫社
              alt="社团qq群" class="showcase-img">
       </div>
       <div class="image-card">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301462123-2m780dkg-img_mh4peyqh_s96r8t.jpg" 
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761408184417-f90n79eq-img_mh6gyd9s_wh3dco.jpg" 
              alt="社团b站号" class="showcase-img">
       </div>
       <div class="image-card">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301476772-ztijvwdf-img_mh4pfa1f_cblgb8.jpg" 
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761408344580-6smzvroq-img_mh6h1s4d_o4ogfr.png" 
              alt="社团社娘" class="showcase-img">
       </div>
     </div>
