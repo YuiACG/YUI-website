@@ -47,7 +47,7 @@ title: YUI动漫社
   width: 100vw !important;
   height: 100vh !important;
   overflow: hidden !important;
-  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761288116445-tf53erp2-img_mh4hgq1l_nl04rt.png') !important;
+  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761314728097-qoiiped0-img_mh4xb9vr_5ax1rm.png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
@@ -69,7 +69,6 @@ title: YUI动漫社
            alt="社团形象角色" 
            style="width: auto; height: auto;">
     </div>
-
     <!-- 下方三张图片 -->
     <div class="image-showcase" style="
       position: absolute;
@@ -83,7 +82,7 @@ title: YUI动漫社
       padding: 0 2rem;
     ">
       <div class="image-card" style="width: 25%; max-width: 220px;">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a5861106-img_mh4pelfn_kj5f5d.jpg" 
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" 
              alt="社团qq群" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="image-card" style="width: 25%; max-width: 220px;">
@@ -91,7 +90,7 @@ title: YUI动漫社
              alt="社团b站号" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="image-card" style="width: 25%; max-width: 220px;">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761408344580-6smzvroq-img_mh6hls4d_o4ogf8.png" 
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761408344580-6smzvroq-img_mh6h1s4d_o4ogfr.png" 
              alt="社团社娘" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </div>
