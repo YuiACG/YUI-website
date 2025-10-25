@@ -1,27 +1,32 @@
-/* 清除所有默认背景和边距 */
+/* 全局样式重置 */
 * {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
 }
 
-/* 强制VitePress核心组件透明 */
+/* 强制VitePress核心组件透明，确保背景图全屏 */
 .VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
   background: transparent !important;
   border: none !important;
 }
 
-/* 导航栏保持可见 */
+/* 导航栏样式 */
 .VPNav {
   background: rgba(0, 0, 0, 0.5) !important;
   z-index: 100 !important;
 }
 
+/* 角色图悬浮效果 */
+.character-display:hover {
+  transform: translateY(-10px) !important;
+}
+
+.character-display:hover img {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
 /* 图片卡片悬停效果 */
 .image-card:hover {
   transform: translateY(-5px) !important;
-}
-/* 角色图悬浮效果（迁移自内嵌<style>） */
-.character-display:hover {
-  transform: translateY(-10px) !important;
 }
