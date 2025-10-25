@@ -37,10 +37,26 @@ title: YUI动漫社
                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
                  transition: box-shadow 0.5s ease;
                ">
-          <style>
-            .character-display:hover { transform: translateY(-10px); }
-            .character-display:hover img { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); }
-          </style>
+         <!-- 角色图（左侧悬浮） -->
+<div class="character-display" style="
+  float: left;
+  width: 40%;
+  min-width: 300px;
+  padding: 2rem;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+">
+  <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
+       alt="社团形象角色" 
+       style="
+         width: 100%;
+         height: auto;
+         border: 2px solid rgba(255, 255, 255, 0.8);
+         border-radius: 8px;
+         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+         transition: box-shadow 0.5s ease;
+       ">
+</div>
         </div>
         <!-- 右侧留白 -->
         <div style="float: right; width: 60%;"></div>
