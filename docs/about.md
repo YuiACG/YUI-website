@@ -231,7 +231,7 @@ title: 社团介绍 | YUI动漫社
       <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" alt="YUI动漫社角色形象">
     </div>
     <div class="character-desc">
-      <p>社团专属角色「YUI，YORU」是由创作部成员联合设计的形象，紫色长发搭配星星发饰，象征着梦想与希望；绿色眼瞳代表活力与生命力。</p>
+      <p>社团专属角色「YUI，YORU」</p>
       <p>「YUI」的设定是活泼天真的妹妹，性格开朗、乐于助人，绿色眼瞳与浅色系的藤曼发饰搭配代表活力与生命力。</p>
       <p>「YORU」的设定是温柔沉稳的姐姐，善解人意，知心体贴，紫色长发搭配星星发饰，象征着梦想与希望。</p>
     </div>
