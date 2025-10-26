@@ -26,7 +26,7 @@ title: YUI动漫社
       position: absolute;
       top: 40% !important; /* 核心修改：从5%上移至40%（中间偏上位置） */
       left: 50% !important; /* 水平居中 */
-      transform: translate(-50%, -50%) scale(0.8); /* 保持原有缩放，新增水平居中偏移 */
+      transform: translate(-50%, -50%) scale(2); /* 保持原有缩放，新增水平居中偏移 */
       transform-origin: center center; /* 以中心为支点，确保动画平衡 */
       animation: characterFloat 6s ease-in-out infinite;
       z-index: 10;
