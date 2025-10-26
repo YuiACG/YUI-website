@@ -16,7 +16,7 @@ title: YUI动漫社
   z-index: 1 !important;
 ">
   <div style="position: relative; z-index: 2; width: 100%; height: 100%;">
-    <!-- 人物容器（添加明确类名确保动画选中） -->
+    <!-- 人物容器 -->
     <div class="character-display" style="
       position: absolute !important;
       top: 45% !important;
@@ -24,8 +24,6 @@ title: YUI动漫社
       transform: translate(-50%, -50%) scale(0.6) !important;
       transform-origin: center center !important;
       z-index: 10 !important;
-      /* 强制启用动画 */
-      animation: float 6s ease-in-out infinite !important;
     ">
       <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
            alt="社团形象角色" style="width: auto; height: auto;">
@@ -58,15 +56,15 @@ title: YUI动漫社
   </div>
 </div>
 
-<!-- 强制动画生效的关键样式 -->
+<!-- 修正动画关键帧语法 -->
 <style>
-  /* 最高优先级定义动画 */
-  :root body .character-display {
+  /* 人物浮动动画 */
+  .character-display {
     animation: float 6s ease-in-out infinite !important;
-    animation-play-state: running !important; /* 强制播放动画 */
+    animation-play-state: running !important;
   }
 
-  /* 明确动画关键帧，确保无冲突 */
+  /* 关键帧修正：@keyframes 拼写正确 */
   @keyframes float {
     0% {
       transform: translate(-50%, -50%) scale(0.6) translateY(0px) translateX(0px) rotate(0deg) !important;
@@ -85,18 +83,10 @@ title: YUI动漫社
     }
   }
 
-  /* 悬停效果不影响动画基础设置 */
+  /* 悬停效果 */
   .character-display:hover {
     animation-play-state: paused !important;
     transform: translate(-50%, -50%) scale(0.62) !important;
-  }
-
-  /* 确保没有样式阻止动画 */
-  * {
-    animation: none !important;
-  }
-  .character-display {
-    animation: float 6s ease-in-out infinite !important;
   }
 
   .image-card:hover {

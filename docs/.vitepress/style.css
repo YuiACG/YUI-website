@@ -1,4 +1,4 @@
-/* 清除默认样式 */
+/* 仅保留必要样式，不干扰动画 */
 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -8,29 +8,14 @@
   outline: none !important;
 }
 
-/* 确保VitePress组件透明 */
-.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout,
-.VPNav, .VPNavItem, .VPNavMenu {
+/* 确保背景透明，不裁剪动画 */
+.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
   background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  overflow: visible !important; /* 避免裁剪动画 */
-}
-
-/* 图片及容器样式 */
-.character-display, .image-showcase, .image-card, img {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
+  overflow: visible !important;
 }
 
 /* 导航栏样式 */
 .VPNav {
   background: rgba(0, 0, 0, 0.3) !important;
   z-index: 100 !important;
-}
-
-/* 确保动画不被覆盖 */
-.character-display {
-  animation: float 6s ease-in-out infinite !important;
 }
