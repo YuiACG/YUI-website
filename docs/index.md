@@ -16,19 +16,21 @@ title: YUI动漫社
   z-index: 1 !important;
 ">
   <div style="position: relative; z-index: 2; width: 100%; height: 100%;">
-    <!-- 人物容器 -->
+    <!-- 角色图向上微调（核心修改：top值减小） -->
     <div class="character-display" style="
       position: absolute !important;
-      top: 45% !important;
+      top: 40% !important; /* 从45%上移至40%，数值越小越靠上 */
       left: 50% !important;
       transform: translate(-50%, -50%) scale(0.6) !important;
       transform-origin: center center !important;
       z-index: 10 !important;
     ">
-      <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
-           alt="社团形象角色" style="width: auto; height: auto;">
+      <img id="central-character" 
+           src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
+           alt="社团形象角色" 
+           style="width: auto; height: auto;">
     </div>
-    <!-- 下方三张图片 -->
+    <!-- 下方三张图片（保持不变） -->
     <div class="image-showcase" style="
       position: absolute;
       bottom: 5%;
@@ -56,37 +58,39 @@ title: YUI动漫社
   </div>
 </div>
 
-<!-- 修正动画关键帧语法 -->
+<!-- 跃动动画样式（保持不变） -->
 <style>
-  /* 人物浮动动画 */
-  .character-display {
-    animation: float 6s ease-in-out infinite !important;
+  #central-character {
+    animation: bounce 3s ease-in-out infinite !important;
     animation-play-state: running !important;
+    will-change: transform;
+    transform-origin: bottom center !important;
   }
 
-  /* 关键帧修正：@keyframes 拼写正确 */
-  @keyframes float {
-    0% {
-      transform: translate(-50%, -50%) scale(0.6) translateY(0px) translateX(0px) rotate(0deg) !important;
+  @keyframes bounce {
+    0% { 
+      transform: translateY(0px) scale(1, 1) rotate(0deg) !important; 
     }
-    25% {
-      transform: translate(-50%, -50%) scale(0.6) translateY(-12px) translateX(6px) rotate(1.5deg) !important;
+    20% { 
+      transform: translateY(-30px) scale(1.05, 0.95) rotate(2deg) !important;
     }
-    50% {
-      transform: translate(-50%, -50%) scale(0.6) translateY(0px) translateX(0px) rotate(0deg) !important;
+    40% { 
+      transform: translateY(-50px) scale(1.1, 0.9) rotate(-2deg) !important;
     }
-    75% {
-      transform: translate(-50%, -50%) scale(0.6) translateY(12px) translateX(-6px) rotate(-1.5deg) !important;
+    60% { 
+      transform: translateY(-30px) scale(1.05, 0.95) rotate(1deg) !important;
     }
-    100% {
-      transform: translate(-50%, -50%) scale(0.6) translateY(0px) translateX(0px) rotate(0deg) !important;
+    80% { 
+      transform: translateY(-10px) scale(1.02, 0.98) rotate(0deg) !important;
+    }
+    100% { 
+      transform: translateY(0px) scale(1, 1) rotate(0deg) !important;
     }
   }
 
-  /* 悬停效果 */
-  .character-display:hover {
+  #central-character:hover {
     animation-play-state: paused !important;
-    transform: translate(-50%, -50%) scale(0.62) !important;
+    transform: scale(1.1) !important;
   }
 
   .image-card:hover {
