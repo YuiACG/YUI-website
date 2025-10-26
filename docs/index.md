@@ -19,7 +19,7 @@ title: YUI动漫社
     <!-- 角色图向上微调（核心修改：top值减小） -->
     <div class="character-display" style="
       position: absolute !important;
-      top: 40% !important; /* 从45%上移至40%，数值越小越靠上 */
+      top: 30% !important; /* 从45%上移至40%，数值越小越靠上 */
       left: 50% !important;
       transform: translate(-50%, -50%) scale(0.6) !important;
       transform-origin: center center !important;
