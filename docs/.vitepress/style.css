@@ -1,48 +1,27 @@
-/* 清除所有元素的默认边框和透明背景 */
+/* 清除默认样式 */
 * {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
   border: none !important;
-  background: none !important; /* 清除默认背景 */
-  outline: none !important; /* 清除聚焦边框 */
+  background: none !important;
+  outline: none !important;
 }
 
-/* 确保VitePress组件无残留背景 */
+/* 确保VitePress组件透明 */
 .VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout,
 .VPNav, .VPNavItem, .VPNavMenu {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  overflow: visible !important; /* 避免裁剪动画 */
 }
 
-/* 清除图片容器可能的透明边框 */
-.character-display, .image-showcase, .image-card {
+/* 图片及容器样式 */
+.character-display, .image-showcase, .image-card, img {
   border: none !important;
   box-shadow: none !important;
   background: none !important;
-}
-
-/* 图片本身无任何边框 */
-img {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-  outline: none !important;
-}
-
-/* 全局样式重置（与上方重复，可保留一份） */
-* {
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  border: none !important;
-}
-
-/* 清除VitePress默认样式干扰 */
-.VPApp, .VPContent, .VPDoc, .VPHome, .VPLayout {
-  background: transparent !important;
-  overflow: hidden !important;
 }
 
 /* 导航栏样式 */
@@ -51,38 +30,7 @@ img {
   z-index: 100 !important;
 }
 
-/* 图片卡片悬停效果 */
-.image-card:hover {
-  transform: translateY(-5px) !important;
-}
-
-/* 人物浮动动画（核心新增） */
+/* 确保动画不被覆盖 */
 .character-display {
-  animation: characterFloat 6s ease-in-out infinite !important;
-  animation-play-state: running !important; /* 强制播放 */
-}
-
-/* 明确动画关键帧，确保无冲突 */
-@keyframes characterFloat {
-  0% {
-    transform: scale(0.5) translateY(0px) rotate(0deg) !important;
-  }
-  25% {
-    transform: scale(0.5) translateY(-8px) rotate(1deg) !important;
-  }
-  50% {
-    transform: scale(0.5) translateY(0px) rotate(0deg) !important;
-  }
-  75% {
-    transform: scale(0.5) translateY(8px) rotate(-1deg) !important;
-  }
-  100% {
-    transform: scale(0.5) translateY(0px) rotate(0deg) !important;
-  }
-}
-
-/* 悬停时暂停动画并轻微放大 */
-.character-display:hover {
-  animation-play-state: paused !important;
-  transform: scale(0.52) !important;
+  animation: float 6s ease-in-out infinite !important;
 }
