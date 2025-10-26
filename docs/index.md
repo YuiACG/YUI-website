@@ -26,7 +26,7 @@ title: YUI动漫社
       position: absolute;
       top: 40% !important; /* 核心修改：从5%上移至40%（中间偏上位置） */
       left: 50% !important; /* 水平居中 */
-      transform: translate(-50%, -50%) scale(6); /* 保持原有缩放，新增水平居中偏移 */
+      transform: translate(-50%, -50%) scale(1.5); /* 保持原有缩放，新增水平居中偏移 */
       transform-origin: center center; /* 以中心为支点，确保动画平衡 */
       animation: characterFloat 6s ease-in-out infinite;
       z-index: 10;
@@ -123,16 +123,16 @@ title: YUI动漫社
 <!-- 浮动动画样式（保持不变） -->
 <style>
 @keyframes characterFloat {
-  0% { transform: translate(-50%, -50%) scale(0.5) translateY(0px) rotate(0deg); }
-  25% { transform: translate(-50%, -50%) scale(0.5) translateY(-8px) rotate(1deg); }
-  50% { transform: translate(-50%, -50%) scale(0.5) translateY(0px) rotate(0deg); }
-  75% { transform: translate(-50%, -50%) scale(0.5) translateY(8px) rotate(-1deg); }
-  100% { transform: translate(-50%, -50%) scale(0.5) translateY(0px) rotate(0deg); }
+  0% { transform: translate(-50%, -50%) scale(1.5) translateY(0px) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) scale(1.5) translateY(-8px) rotate(1deg); }
+  50% { transform: translate(-50%, -50%) scale(1.5) translateY(0px) rotate(0deg); }
+  75% { transform: translate(-50%, -50%) scale(1.5) translateY(8px) rotate(-1deg); }
+  100% { transform: translate(-50%, -50%) scale(1.5) translateY(0px) rotate(0deg); }
 }
 
 .character-display:hover {
   animation-play-state: paused;
-  transform: translate(-50%, -50%) scale(0.52) !important;
+  transform: translate(-50%, -50%) scale(1.52) !important;
 }
 
 .image-card:hover {
