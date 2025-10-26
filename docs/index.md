@@ -70,23 +70,24 @@ title: YUI动漫社
   }
 
   /* 动画关键帧：融合左右浮动和上下跃动 */
-  @keyframes floatBounce {
-    0% { 
-      transform: translateY(0px) translateX(0px) rotate(0deg) !important; 
-    }
-    25% { 
-      transform: translateY(-20px) translateX(8px) rotate(1deg) !important; /* 右上浮动 */
-    }
-    50% { 
-      transform: translateY(-30px) translateX(0px) rotate(0deg) !important; /* 上方最高点 */
-    }
-    75% { 
-      transform: translateY(-20px) translateX(-8px) rotate(-1deg) !important; /* 左上浮动 */
-    }
-    100% { 
-      transform: translateY(0px) translateX(0px) rotate(0deg) !important; /* 回到原点 */
-    }
+  /* 动画关键帧：融合左右浮动和上下跃动 */
+@keyframes floatBounce {
+  0% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg) !important; 
   }
+  25% { 
+    transform: translateY(-20px) translateX(8px) rotate(1deg) !important; /* 右上浮动 */
+  }
+  50% { 
+    transform: translateY(-30px) translateX(0px) rotate(0deg) !important; /* 上方最高点 */
+  }
+  75% { 
+    transform: translateY(-20px) translateX(-8px) rotate(-1deg) !important; /* 左上浮动 */
+  }
+  100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg) !important; /* 回到原点 */
+  }
+}
 
   /* 悬停效果：暂停动画+轻微放大 */
   #central-character:hover {
