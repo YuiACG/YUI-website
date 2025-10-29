@@ -34,7 +34,7 @@ title: 技术组 | YUI动漫社
   }
 
   .group-name {
-    font-size: 6rem;
+    font-size: 10rem;
     color: #3399ff;
     margin: 0 0 1.5rem 0;
     position: relative;
@@ -55,7 +55,7 @@ title: 技术组 | YUI动漫社
 
   .group-motto {
     font-size: 2rem;
-    color: #666;
+    color: #ff0404ff;
     font-style: italic;
     margin: 2rem 0 0 0;
     max-width: 800px; /* 限制宗旨文字最大宽度，避免过宽 */
