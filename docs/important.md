@@ -79,6 +79,7 @@ title: 活动情报 | YUI动漫社
     font-size: 1.8rem !important;
     margin-bottom: 2rem;
     font-weight: bold;
+    line-height:1.8;
   }
 
   /* 活动标题与描述 - 强制黑色 */
