@@ -3,299 +3,180 @@ title: 社团介绍 | YUI动漫社
 ---
 
 <style>
-  /* 全局基础样式 */
+  /* 全局基础样式 - 常规排版 */
   body {
-    background-color: white !important;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    background-color: white;
+    font-size: 1rem; /* 常规基准字号 */
+    line-height: 1.6; /* 舒适行高 */
+    color: #333; /* 常规文字颜色 */
     margin: 0;
     padding: 0;
-    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
-  /* 页面容器 - 单列展开效果 */
+  /* 页面容器 */
   .about-container {
-    max-width: 1200px;
+    max-width: 1000px; /* 适中容器宽度 */
     margin: 0 auto;
-    padding: 3rem 5%;
-    background-color: white;
+    padding: 2rem 5%;
   }
 
-  /* 模块容器 - 逐列展开动画 */
+  /* 模块间距 */
   .section {
-    width: 100%;
-    margin-bottom: 8rem;
-    padding: 0 1rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin-bottom: 4rem; /* 常规模块间距 */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0; /* 模块分隔线 */
   }
 
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
+  .section:last-child {
+    border-bottom: none; /* 最后一个模块无分隔线 */
   }
 
   /* 标题样式 */
   .section-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* 常规标题大小 */
     color: #000;
-    margin-bottom: 2.5rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 4px solid #ff66bb;
+    margin: 0 0 1.5rem 0; /* 标题下方间距 */
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ff66bb;
     display: inline-block;
-    font-weight: bold;
-    position: relative;
-  }
-
-  .section-title::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 4px;
-    bottom: -4px;
-    left: 0;
-    background-color: #ff99cc;
-    transition: width 0.3s ease;
-  }
-
-  .section-title:hover::after {
-    width: 100%;
   }
 
   /* 内容布局容器 */
   .about-content {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    flex-wrap: wrap; /* 自动换行 */
+    gap: 2rem; /* 图文间距 */
     align-items: center;
-  }
-
-  @media (min-width: 900px) {
-    .about-content {
-      flex-direction: row;
-    }
+    margin-bottom: 1rem;
   }
 
   /* 文字区域 */
   .about-text {
     flex: 1;
-    min-width: 100%;
-  }
-
-  @media (min-width: 900px) {
-    .about-text {
-      min-width: 450px;
-    }
+    min-width: 300px; /* 最小宽度适配手机 */
   }
 
   .about-text p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #333;
-    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* 段落间距 */
+    text-align: left; /* 常规左对齐 */
   }
 
   /* 图片区域 */
   .about-img {
     flex: 1;
-    min-width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
+    min-width: 300px;
+    border-radius: 8px; /* 适中圆角 */
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .about-img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
   }
 
   .about-img img {
     width: 100%;
     height: auto;
-    transition: transform 0.6s ease;
-  }
-
-  .about-img:hover img {
-    transform: scale(1.03);
+    display: block; /* 去除图片底部间隙 */
   }
 
   .about-img a {
     display: block;
     text-decoration: none;
-    position: relative;
-  }
-
-  .about-img a::after {
-    content: '🔍 点击查看大图';
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .about-img:hover a::after {
-    opacity: 1;
   }
 
   /* 特色活动网格 */
   .activities-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 2rem;
-  }
-
-  @media (min-width: 900px) {
-    .activities-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* 卡片间距 */
   }
 
   /* 活动卡片 */
   .activity-card {
     background: #f9f9f9;
-    border-radius: 10px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    border-left: 4px solid transparent;
-  }
-
-  .activity-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
-    border-left-color: #ff66bb;
+    border-radius: 6px;
+    padding: 1.5rem;
+    border-left: 3px solid #ff66bb;
   }
 
   .activity-card h3 {
+    margin: 0 0 0.8rem 0;
+    font-size: 1.3rem;
     color: #000;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
   }
 
   .activity-card p {
+    margin: 0;
     color: #555;
-    line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
   }
 
   /* 社团角色区域 */
   .character-section {
     text-align: center;
-    margin-top: 4rem;
+    padding: 1rem 0;
   }
 
   .character-display {
-    max-width: 800px;
-    margin: 0 auto 2.5rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
   }
 
   .character-display img {
     width: 100%;
     height: auto;
-    animation: float 6s ease-in-out infinite;
-    border-radius: 10px;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(1deg); }
-    50% { transform: translateY(0px) rotate(0deg); }
-    75% { transform: translateY(10px) rotate(-1deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
+    border-radius: 8px;
   }
 
   .character-desc {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
+    text-align: left; /* 描述文字左对齐 */
   }
 
   /* 联系方式区域 */
   .contact-info {
     background: #f5f5f5;
-    color: #000;
-    padding: 3rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
   }
 
   .contact-item {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    min-width: 100%;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-  }
-
-  .contact-item:hover {
-    transform: translateX(5px);
+    gap: 0.8rem;
   }
 
   .contact-item i {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: #ff66bb;
   }
 
-  .contact-item div {
-    font-size: 1.1rem;
-    color: #333;
+  .contact-item .label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #000;
   }
 
-  .contact-item .label {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+  .contact-item .value {
+    color: #555;
   }
 </style>
 
-<!-- 滚动动画脚本（放在style外部） -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  });
-</script>
-
 <div class="about-container">
-  <!-- 社团名称（第一列展开） -->
+  <!-- 社团名称 -->
   <div class="section">
     <h1 class="section-title">YUI动漫社</h1>
     <div class="about-content">
       <div class="about-text">
-        <p>YUI动漫社于2010年更名（前身为西农动漫社），是校内专注于二次元文化传播与交流的学生社团。</p>
-        <p>社团活动丰富多彩，涵盖cosplay、二创制作、美术宅舞等多个领域，是学校最具活力的文化社团之一。</p>
+        <p>YUI动漫社于2010年更名（前身为西农动漫社），是校内专注于二次元文化传播与交流的学生社团。社团名称"YUI"源自"Youth Union of Interest"（兴趣青年联盟）的缩写，象征着因共同热爱而凝聚的年轻力量。</p>
+        <p>截至2024年，社团累计成员超500人，年均举办活动30+场，涵盖cosplay、二创制作、美术宅舞等多个领域，是学校最具活力的文化社团之一。</p>
       </div>
       <div class="about-img">
         <a href="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761727884248-9p6j3h0a-img_mhbrakzb_6fc2y6.jpg" target="_blank">
@@ -305,7 +186,7 @@ title: 社团介绍 | YUI动漫社
     </div>
   </div>
 
-  <!-- 关于我们（第二列展开） -->
+  <!-- 关于我们 -->
   <div class="section">
     <h2 class="section-title">关于我们</h2>
     <div class="about-content">
@@ -317,12 +198,11 @@ title: 社团介绍 | YUI动漫社
       <div class="about-text">
         <p>我们的宗旨是“以兴趣为纽带，让热爱不孤单”。无论你是资深二次元爱好者，还是刚接触动漫文化的萌新，都能在社团中找到归属感。</p>
         <p>社团组成：cosplay组、技术组、宅舞组、美工组、码字组、音声组、应援组，各组协同合作，共同推进社团发展。</p>
-        <p>我们定期组织技能分享会，邀请有经验的成员或校外嘉宾讲解cos妆造、后期修图、动画鉴赏等内容，帮助成员提升兴趣相关技能。</p>
       </div>
     </div>
   </div>
 
-  <!-- 特色活动（第三列展开） -->
+  <!-- 特色活动 -->
   <div class="section">
     <h2 class="section-title">特色活动</h2>
     <div class="activities-grid">
@@ -332,16 +212,16 @@ title: 社团介绍 | YUI动漫社
       </div>
       <div class="activity-card">
         <h3>番剧评选榜</h3>
-        <p>每次精选特定时段热门动漫，展开剧情讨论与观后交流，重温感动，评选心中最佳动漫。</p>
+        <p>每次精选特定时段热门动漫，展开剧情讨论，交流观后感受，重温感动，评选心中佳作。</p>
       </div>
       <div class="activity-card">
-        <h3>创作分享</h3>
-        <p>涵盖插画、手书、短篇同人小说、mmd等类别，鼓励成员发挥创意，优秀作品将制作成社团周边（明信片、徽章等），并在活动中展出。</p>
+        <h3>创作分享会</h3>
+        <p>涵盖插画、手书、短篇同人小说、mmd等类别，鼓励成员发挥创意，优秀作品将制作成社团周边（明信片、徽章等），并在活动展出。</p>
       </div>
     </div>
   </div>
 
-  <!-- 社团角色（第四列展开） -->
+  <!-- 社团角色 -->
   <div class="section character-section">
     <h2 class="section-title">社团角色</h2>
     <div class="character-display">
@@ -354,36 +234,30 @@ title: 社团介绍 | YUI动漫社
     </div>
   </div>
 
-  <!-- 联系方式（第五列展开） -->
+  <!-- 联系方式 -->
   <div class="section">
     <h2 class="section-title">加入我们</h2>
     <div class="contact-info">
-      <div class="contact-item">
-        <i>📱</i>
-        <div>
-          <div class="label">QQ群号</div>
-          <div>183672097（验证消息：动漫社）</div>
+      <div class="contact-list">
+        <div class="contact-item">
+          <i>📱</i>
+          <span class="label">QQ群号：</span>
+          <span class="value">183672097（验证消息：动漫社）</span>
         </div>
-      </div>
-      <div class="contact-item">
-        <i>📺</i>
-        <div>
-          <div class="label">B站账号</div>
-          <div>YUI动漫社（定期更新活动视频）</div>
+        <div class="contact-item">
+          <i>📺</i>
+          <span class="label">B站账号：</span>
+          <span class="value">YUI动漫社（定期更新活动视频）</span>
         </div>
-      </div>
-      <div class="contact-item">
-        <i>📍</i>
-        <div>
-          <div class="label">活动地点</div>
-          <div>校内活动中心多功能厅</div>
+        <div class="contact-item">
+          <i>📍</i>
+          <span class="label">活动地点：</span>
+          <span class="value">到处</span>
         </div>
-      </div>
-      <div class="contact-item">
-        <i>🗓️</i>
-        <div>
-          <div class="label">招新时间</div>
-          <div>每年9月开学季</div>
+        <div class="contact-item">
+          <i>🗓️</i>
+          <span class="label">招新时间：</span>
+          <span class="value">每年9月开学季</span>
         </div>
       </div>
     </div>
