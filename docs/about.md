@@ -34,7 +34,7 @@ title: 社团介绍 | YUI动漫社
 
   /* 标题样式 */
   .section-title {
-    font-size: 2.4rem; /* 常规标题大小 */
+    font-size: 3rem; /* 常规标题大小 */
     color: #000;
     margin: 0 0 1.5rem 0; /* 标题下方间距 */
     padding-bottom: 0.5rem;
@@ -59,7 +59,7 @@ title: 社团介绍 | YUI动漫社
 
   .about-text p {
     font-size: 2rem;
-    margin-bottom: 1.5rem; /* 段落间距 */
+    margin-bottom: 2rem; /* 段落间距 */
     text-align: left; /* 常规左对齐 */
   }
 
@@ -86,8 +86,8 @@ title: 社团介绍 | YUI动漫社
   /* 特色活动网格 */
   .activities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem; /* 卡片间距 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 2rem; /* 卡片间距 */
   }
 
   /* 活动卡片 */
@@ -100,20 +100,20 @@ title: 社团介绍 | YUI动漫社
 
   .activity-card h3 {
     margin: 0 0 0.8rem 0;
-    font-size: 1.3rem;
+    font-size: 3rem;
     color: #000;
   }
 
   .activity-card p {
     margin: 0;
     color: #555;
-    font-size: 0.95rem;
+    font-size: 2rem;
   }
 
   /* 社团角色区域 */
   .character-section {
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
 
   .character-display {
