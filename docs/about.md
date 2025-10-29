@@ -74,7 +74,7 @@ title: 社团介绍 | YUI动漫社
     transform: scale(1.05); /* 图片悬停放大效果 */
   }
 
-.about-img a {
+  .about-img a {
     display: block; /* 使链接覆盖整个图片容器 */
     text-decoration: none; /* 去除下划线 */
   }
