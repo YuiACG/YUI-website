@@ -58,10 +58,10 @@ title: 社团介绍 | YUI动漫社
   /* 图片区域 */
   .about-img {
     flex: 1;
-    min-width: 600px; /* 图片容器最小宽度放大 */
+    min-width: 800px; /* 图片容器最小宽度放大 */
     border-radius: 20px; /* 圆角放大一倍 */
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 阴影范围放大 */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* 阴影范围放大 */
   }
 
   .about-img img {
