@@ -40,6 +40,7 @@ title: 社团介绍 | YUI动漫社
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #ff66bb;
     display: inline-block;
+    line-height: 1.4;
   }
 
   /* 内容布局容器 */
@@ -61,6 +62,7 @@ title: 社团介绍 | YUI动漫社
     font-size: 2rem;
     margin-bottom: 2rem; /* 段落间距 */
     text-align: left; /* 常规左对齐 */
+    line-height: 1.8;
   }
 
   /* 图片区域 */
@@ -132,6 +134,7 @@ title: 社团介绍 | YUI动漫社
     margin: 0 auto;
     text-align: left; /* 描述文字左对齐 */
     font-size: 2rem;
+    line-height:1.8;
   }
 
   /* 联系方式区域 */
