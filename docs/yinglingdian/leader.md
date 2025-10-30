@@ -401,7 +401,7 @@ title: 领航者 | 社长传承榜
       <div class="president-info">
         <h3 class="president-name">北铃</h3>
         <p class="president-term">任期：2025-2026</p>
-        <p class="president-slogan">「让社团成为每个热爱者的港湾，让梦想在这里启航」</p>
+        <p class="president-slogan">「」</p>
       </div>
     </div>
     <!-- 虚席以待1 -->
