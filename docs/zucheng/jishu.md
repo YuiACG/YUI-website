@@ -146,7 +146,7 @@ title: 技术组 | YUI动漫社
 
   .showcase-img {
     width: 100%;
-    height: 220px;
+    height: 500px;
     overflow: hidden;
   }
 
