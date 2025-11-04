@@ -1,0 +1,1 @@
+import{_ as e,c as r,o,j as s}from"./chunks/framework.CBTkueSR.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"history.md","filePath":"history.md"}'),a={name:"history.md"};function n(i,t,c,p,d,l){return o(),r("div",null,[...t[0]||(t[0]=[s("p",null,"超绝制作中",-1)])])}const f=e(a,[["render",n]]);export{_ as __pageData,f as default};
