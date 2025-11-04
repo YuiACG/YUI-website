@@ -251,7 +251,7 @@ title: 美工组 | YUI动漫社
         <h3 class="activity-title">
           <i>🎨</i> 风格创作挑战
         </h3>
-        <p class="activity-desc">定期发布设计主题，成员按主题创作并分享思路，组内互评优化，提升设计审美。</p>
+        <p class="activity-desc">定期发布设计主题，成员按主题创作并分享思路。</p>
       </div>
       <div class="activity-item">
         <h3 class="activity-title">
@@ -267,33 +267,33 @@ title: 美工组 | YUI动漫社
     <h2 class="section-title">设计作品</h2>
     <div class="showcase">
       <div class="showcase-grid">
-        <!-- 作品1：动漫插画 -->
+        <!-- 作品1 -->
         <div class="showcase-item">
           <div class="showcase-img">
             <span class="showcase-tag"></span>
-            <img src="https://picsum.photos/id/96/600/800" alt="1">
+            <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761314728097-qoiiped0-img_mh4xb9vr_5ax1rm.png" alt="1">
           </div>
           <div class="showcase-info">
             <h3 class="showcase-title"></h3>
             <p class="showcase-desc"></p>
           </div>
         </div>
-        <!-- 作品2：活动海报 -->
+        <!-- 作品2 -->
         <div class="showcase-item">
           <div class="showcase-img">
             <span class="showcase-tag"></span>
-            <img src="https://picsum.photos/id/26/600/800" alt="2">
+            <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1762261104180-szdat5ra-img_mhkkrdhc_7324t5.jpg" alt="2">
           </div>
           <div class="showcase-info">
             <h3 class="showcase-title"></h3>
             <p class="showcase-desc"></p>
           </div>
         </div>
-        <!-- 作品3：周边设计 -->
+        <!-- 作品3 -->
         <div class="showcase-item">
           <div class="showcase-img">
             <span class="showcase-tag"></span>
-            <img src="https://picsum.photos/id/42/600/800" alt="3">
+            <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1762261317795-kq7dk2ro-img_mhkkuck6_cveacv.png" alt="3">
           </div>
           <div class="showcase-info">
             <h3 class="showcase-title"></h3>

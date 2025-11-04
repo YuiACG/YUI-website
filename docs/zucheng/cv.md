@@ -292,21 +292,15 @@ title: 音声组 | YUI动漫社
       </div>
       <div class="activity-item">
         <h3 class="activity-title">
-          <i>🎶</i> 翻唱录制教学
+          <i>🎶</i> 翻唱
         </h3>
-        <p class="activity-desc">教授录音设备使用、后期修音技巧，选择热门动漫歌曲进行翻唱，从音准调整到情感处理，制作高质量翻唱作品。</p>
+        <p class="activity-desc">选择各类型歌曲进行翻唱，从音准调整到情感处理，制作高质量翻唱作品。</p>
       </div>
       <div class="activity-item">
         <h3 class="activity-title">
-          <i>📻</i> 广播剧创作
+          <i>🎧</i> 每日一歌
         </h3>
-        <p class="activity-desc">组队制作同人广播剧，分工负责配音、剧本改编、音效设计、后期合成，完整还原动漫角色对话与场景氛围。</p>
-      </div>
-      <div class="activity-item">
-        <h3 class="activity-title">
-          <i>🎧</i> 音效与BGM制作
-        </h3>
-        <p class="activity-desc">学习音效素材剪辑、背景音乐搭配，为社团视频、舞台剧、游戏活动制作专属音效，提升作品的听觉体验。</p>
+        <p class="activity-desc">每日确定演唱主题，于群里尽情展现歌喉。</p>
       </div>
     </div>
   </div>
@@ -315,46 +309,46 @@ title: 音声组 | YUI动漫社
     <h2 class="section-title">音声作品</h2>
     <div class="showcase">
       <div class="showcase-grid">
-        <!-- 作品1：角色配音 -->
+        <!-- 作品1 -->
         <div class="showcase-item">
           <div class="showcase-img">
-            <span class="showcase-tag">角色配音</span>
-            <img src="https://picsum.photos/id/65/600/800" alt="动漫角色配音封面">
+            <span class="showcase-tag">1</span>
+            <img src="https://picsum.photos/id/65/600/800" alt="1">
             <div class="audio-wave">
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
           </div>
           <div class="showcase-info">
-            <h3 class="showcase-title">《经典动漫角色配音合集》</h3>
-            <p class="showcase-desc">包含5个热门动漫角色的经典台词配音，成员通过声线模仿与情感注入还原角色特质，发布于社团音声平台，播放量破千。</p>
+            <h3 class="showcase-title">《》</h3>
+            <p class="showcase-desc"></p>
           </div>
         </div>
-        <!-- 作品2：同人翻唱 -->
+        <!-- 作品2 -->
         <div class="showcase-item">
           <div class="showcase-img">
-            <span class="showcase-tag">同人翻唱</span>
-            <img src="https://picsum.photos/id/24/600/800" alt="动漫歌曲翻唱封面">
+            <span class="showcase-tag">2</span>
+            <img src="https://picsum.photos/id/24/600/800" alt="2">
             <div class="audio-wave">
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
           </div>
           <div class="showcase-info">
-            <h3 class="showcase-title">《二次元金曲翻唱集》</h3>
-            <p class="showcase-desc">收录3首经典动漫OP/ED翻唱，采用多轨录音制作，加入和声设计，后期进行混音处理，还原歌曲的热血与治愈感。</p>
+            <h3 class="showcase-title">《》</h3>
+            <p class="showcase-desc"></p>
           </div>
         </div>
-        <!-- 作品3：广播剧 -->
+        <!-- 作品3 -->
         <div class="showcase-item">
           <div class="showcase-img">
-            <span class="showcase-tag">广播剧</span>
-            <img src="https://picsum.photos/id/42/600/800" alt="同人广播剧封面">
+            <span class="showcase-tag">3</span>
+            <img src="https://picsum.photos/id/42/600/800" alt="3">
             <div class="audio-wave">
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
           </div>
           <div class="showcase-info">
-            <h3 class="showcase-title">《异世界咖啡馆》短篇广播剧</h3>
-            <p class="showcase-desc">原创同人广播剧，7名成员参与配音，包含场景音效与背景音乐设计，时长12分钟，讲述异世界来客的温馨故事，获社团年度最佳作品。</p>
+            <h3 class="showcase-title">《》</h3>
+            <p class="showcase-desc"></p>
           </div>
         </div>
       </div>

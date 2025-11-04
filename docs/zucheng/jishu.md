@@ -249,7 +249,7 @@ title: 技术组 | YUI动漫社
       <div class="showcase-grid">
         <div class="showcase-item">
           <div class="showcase-img">
-            <img src="https://picsum.photos/id/0/600/400" alt="特效制作">
+            <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1762252223601-komiayht-img_mhkfgwox_q9zwvo.png" alt="特效制作">
           </div>
           <div class="showcase-info">
             <h3 class="showcase-title">特效制作</h3>
