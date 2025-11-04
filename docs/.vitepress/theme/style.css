@@ -1,0 +1,213 @@
+/* 全局样式变量 */
+:root {
+  --vp-c-primary: #61dafb;
+  --vp-c-primary-light: #96e6ff;
+  --vp-c-primary-dark: #2bb7e6;
+  --vp-c-bg: #0a0a16;
+  --vp-c-bg-alt: #121229;
+  --vp-c-text: #e0e0e0;
+  --vp-c-text-light: #b0b0b0;
+}
+
+/* 基础样式覆盖 */
+body {
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text);
+}
+
+/* 导航栏样式 */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 5%;
+  background: rgba(10, 10, 22, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-section {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-group-title {
+  font-size: 0.9rem;
+  color: var(--vp-c-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.nav-link, .nav-item {
+  color: var(--vp-c-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 0.2rem 0;
+}
+
+.nav-link:hover, .nav-item:hover {
+  color: var(--vp-c-primary);
+  transform: translateX(3px);
+}
+
+/* 主视觉区域 */
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761288116445-tf53erp2-img_mh4hgqd1_nl04rt.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6) saturate(1.2);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  gap: 5rem;
+}
+
+/* 图片展示区 */
+.image-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.image-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.image-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(97, 218, 251, 0.2);
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+
+/* 角色动画 */
+.character-img {
+  max-height: 75vh;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(97, 218, 251, 0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 页脚样式 */
+.social-footer {
+  padding: 1rem 0;
+  background: rgba(10, 10, 22, 0.8);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  color: var(--vp-c-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--vp-c-primary);
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .image-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .main-nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .character-display {
+    justify-content: center;
+  }
+  
+  .character-img {
+    max-height: 50vh;
+  }
+  
+  .image-showcase {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  
+  .main-nav {
+    display: none;
+  }
+}

@@ -1,73 +1,141 @@
 ---
-layout: home
-
-hero:
-  name: YUI动漫社
-  text: 西北农林科技大学
-  tagline: 以热爱为名，共赴二次元之约
-  image:
-    src: http://pic.nwafu.xyz/images/0000000000000000000000003b8a09ad0000000000000000000000003b8a09ad/1760937426486-bi77cilb-img_mgyoodto_fne3bt.png
-    alt: YUI动漫社Logo
-  actions:
-    - theme: brand
-      text: 查看社团活动
-      link: /markdown-examples
-    - theme: alt
-      text: 加入我们
-      link: /api-examples
-
-features:
-  - icon: 🎭
-    title: 宅舞表演
-    details: 精彩绝伦的宅舞演出，让你感受二次元的魅力与活力。
-  - icon: 🎵
-    title: 动漫音乐
-    details: 经典动漫歌曲演唱与演奏，带你重温那些年追过的番剧。
-  - icon: 📸
-    title: 摄影展示
-    details: 社团活动精彩瞬间记录，留住每一个美好回忆。
-  - icon: 👥
-    title: 社交聚会
-    details: 定期举办社团聚会，结识更多志同道合的朋友。
-  - icon: 🎨
-    title: 创意手工
-    details: 动漫周边制作与交换，发挥你的创意与想象力。
-  - icon: 🎤
-    title: 声优表演
-    details: 经典角色配音表演，体验成为声优的乐趣。
+title: YUI动漫社
 ---
 
+<!-- 根容器：固定布局，无多余边框 -->
+<div class="yui-community" style="
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-image: url('https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761314728097-qoiiped0-img_mh4xb9vr_5ax1rm.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  z-index: 1 !important;
+">
+  <!-- 主内容区域：无透明框 -->
+  <div style="position: relative; z-index: 2; width: 100%; height: 100%;">
+    <!-- 角色图（移动到中间偏上） -->
+    <div class="character-display" style="
+      position: absolute;
+      top: 40% !important; /* 核心修改：从5%上移至40%（中间偏上位置） */
+      left: 50% !important; /* 水平居中 */
+      transform: translate(-50%, -50%) scale(0.9); /* 保持原有缩放，新增水平居中偏移 */
+      transform-origin: center center; /* 以中心为支点，确保动画平衡 */
+      animation: characterFloat 6s ease-in-out infinite;
+      z-index: 10;
+      /* 清除默认边距和背景 */
+      margin: 0 !important;
+      padding: 0 !important;
+      background: none !important;
+      border: none !important;
+    ">
+      <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301412621-jm7lkk17-img_mh4pdvqj_qbv741.png" 
+           alt="社团形象角色" 
+           style="
+             width: auto;
+             height: auto;
+             border: none !important;
+             box-shadow: none !important;
+             background: none !important;
+             outline: none !important;
+           ">
+    </div>
+    <!-- 下方三张图片（无透明框，保持不变） -->
+    <div class="image-showcase" style="
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 2rem;
+      background: none !important;
+      border: none !important;
+      margin: 0 !important;
+    ">
+      <!-- 第一张图片（无透明框） -->
+      <div class="image-card" style="
+        width: 25%;
+        max-width: 220px;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+      ">
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761301445019-a586l1o6-img_mh4pelfn_kj5fd5.jpg" 
+             alt="社团qq群" style="
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border: none !important;
+               background: none !important;
+             ">
+      </div>
+      <!-- 第二张图片（无透明框） -->
+      <div class="image-card" style="
+        width: 25%;
+        max-width: 220px;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+      ">
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761408184417-f90n79eq-img_mh6gyd9s_wh3dco.jpg" 
+             alt="社团b站号" style="
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border: none !important;
+               background: none !important;
+             ">
+      </div>
+      <!-- 第三张图片（无透明框） -->
+      <div class="image-card" style="
+        width: 25%;
+        max-width: 220px;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+      ">
+        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761408344580-6smzvroq-img_mh6h1s4d_o4ogfr.png" 
+             alt="社团社娘" style="
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border: none !important;
+               background: none !important;
+             ">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 浮动动画样式（保持不变） -->
 <style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #ff7bac, #a26bf7);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #ff7bac 50%, #a26bf7 50%);
-  --vp-home-hero-image-filter: blur(40px);
+@keyframes characterFloat {
+  0% { transform: translate(-50%, -50%) scale(0.9) translateY(0px) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) scale(0.9) translateY(-8px) rotate(1deg); }
+  50% { transform: translate(-50%, -50%) scale(0.9) translateY(0px) rotate(0deg); }
+  75% { transform: translate(-50%, -50%) scale(0.9) translateY(8px) rotate(-1deg); }
+  100% { transform: translate(-50%, -50%) scale(0.9) translateY(0px) rotate(0deg); }
 }
 
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
+.character-display:hover {
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) scale(0.92) !important;
 }
 
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(72px);
-  }
-}
-
-.VPHomeFeatures .item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 12px;
-}
-
-.VPHomeFeatures .item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(162, 107, 247, 0.2);
-}
-
-.dark .VPHomeFeatures .item:hover {
-  box-shadow: 0 12px 24px rgba(162, 107, 247, 0.4);
+.image-card:hover {
+  transform: translateY(-5px) !important;
 }
 </style>
