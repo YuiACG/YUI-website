@@ -1,433 +1,363 @@
 ---
-title: 声韵榜 | 音声组创作册
+title: 音声组 | YUI动漫社
 ---
 
 <style>
-  /* 全局样式重置 */
+  /* 全局盒模型初始化 */
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
+  /* 页面基础样式 */
   body {
-    background-color: #121826;
-    background-image: 
-      radial-gradient(circle at 25% 30%, rgba(76, 201, 240, 0.1) 0%, transparent 45%),
-      radial-gradient(circle at 75% 70%, rgba(76, 201, 240, 0.1) 0%, transparent 45%);
-    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
-    color: #fff;
-    line-height: 1.6;
-    padding: 3rem 0;
-    overflow-x: hidden;
+    background-color: white;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.8;
   }
 
-  /* 页面容器 */
-  .audio-hall {
-    max-width: 1400px;
+  /* 主容器 */
+  .audio-group-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 3%;
-    position: relative;
+    padding: 4rem 5%;
   }
 
-  /* 页面标题区域 */
-  .hall-header {
+  /* 标题区域 */
+  .group-header {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
+    padding: 0 1rem 3rem;
+    border-bottom: 2px solid #cc66cc;
+  }
+
+  .group-name {
+    font-size: 10rem;
+    color: #993399;
+    margin: 0 0 1.5rem 0;
     position: relative;
-    padding: 2rem 0;
+    display: inline-block;
+    line-height: 1.2;
   }
 
-  .hall-title {
-    font-size: 4.5rem;
-    background: linear-gradient(90deg, #4cc9f0, #87ceeb, #4cc9f0);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-    text-shadow: 0 0 20px rgba(76, 201, 240, 0.6);
-    animation: textShine 3s linear infinite;
+  .group-name::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 4px;
+    background: #cc66cc;
+    bottom: -14px;
+    left: 10%;
+    border-radius: 2px;
   }
 
-  @keyframes textShine {
-    to { background-position: 200% center; }
-  }
-
-  .hall-subtitle {
-    font-size: 1.2rem;
-    color: #b0d8e8;
-    font-weight: normal;
+  .group-motto {
+    font-size: 2rem;
+    color: #993399;
+    font-style: italic;
+    margin: 2rem 0 0 0;
     max-width: 800px;
-    margin: 0 auto;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .hall-subtitle::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #4cc9f0, transparent);
-  }
-
-  /* 音声组网格布局 */
-  .audio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 5rem;
-  }
-
-  /* 音声创作者卡片容器 */
-  .audio-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-  }
-
-  /* 图片容器（核心特效区） */
-  .audio-frame {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    animation: float 6s ease-in-out infinite;
-    transition: all 0.5s ease;
-  }
-
-  /* 发光边框与脉冲特效（模拟声波光晕） */
-  .audio-frame::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid transparent;
-    border-radius: 14px;
-    background: linear-gradient(45deg, #4cc9f0, #87ceeb) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    animation: borderPulse 3s infinite;
-    z-index: 2;
-  }
-
-  @keyframes borderPulse {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; box-shadow: 0 0 30px rgba(76, 201, 240, 0.6); }
-  }
-
-  /* 光效扫描动画（模拟声波流动） */
-  .audio-frame::after {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(
-      to bottom,
-      rgba(76, 201, 240, 0) 0%,
-      rgba(76, 201, 240, 0.25) 50%,
-      rgba(76, 201, 240, 0) 100%
-    );
-    transform: skewY(-15deg);
-    animation: lightScan 5s infinite;
-    z-index: 1;
-  }
-
-  @keyframes lightScan {
-    0% { top: -100%; }
-    100% { top: 100%; }
-  }
-
-  /* 核心创作者强化特效（突出声音魅力） */
-  .core .audio-frame {
-    box-shadow: 
-      0 0 25px rgba(76, 201, 240, 0.7),
-      0 0 45px rgba(76, 201, 240, 0.5),
-      0 0 65px rgba(76, 201, 240, 0.3);
-  }
-
-  /* 虚席以待弱化特效 */
-  .vacant .audio-frame {
-    box-shadow: 
-      0 0 10px rgba(70, 120, 140, 0.2),
-      0 0 20px rgba(70, 120, 140, 0.1);
-  }
-
-  .vacant .audio-frame::before {
-    background: linear-gradient(45deg, #446677, #557788) border-box;
-  }
-
-  .vacant .audio-frame::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(70, 120, 140, 0) 0%,
-      rgba(70, 120, 140, 0.1) 50%,
-      rgba(70, 120, 140, 0) 100%
-    );
-  }
-
-  /* 图片样式（突出录音/创作氛围） */
-  .audio-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.8s ease, filter 0.5s ease;
-    filter: contrast(1.05) saturate(1.1);
-  }
-
-  /* 浮动动画（模拟声音波动感） */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-18px) rotate(1.5deg); }
-  }
-
-  /* 悬停特效（强化声音互动感） */
-  .audio-card:hover .audio-frame {
-    transform: scale(1.03) translateY(-8px);
-  }
-
-  .audio-card:hover::before {
-    content: "";
-    position: absolute;
-    width: 125%;
-    height: 125%;
-    top: -12.5%;
-    left: -12.5%;
-    background: radial-gradient(circle, rgba(76, 201, 240, 0.2) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: -1;
-    animation: particleSpread 0.7s ease-out forwards;
-  }
-
-  @keyframes particleSpread {
-    0% { transform: scale(0.6); opacity: 0.9; }
-    100% { transform: scale(1); opacity: 0; }
-  }
-
-  .core:hover .audio-img {
-    transform: scale(1.08);
-    filter: contrast(1.2) saturate(1.2);
-  }
-
-  /* 文字区域（突出声音风格） */
-  .audio-info {
-    text-align: center;
+  /* 内容区域通用样式 */
+  .section {
+    margin-bottom: 8rem;
     padding: 0 1rem;
-    width: 100%;
-    transform: translateY(0);
+  }
+
+  .section-title {
+    font-size: 5rem;
+    color: #993399;
+    margin: 0 0 3rem 0;
+    padding-left: 1rem;
+    border-left: 5px solid #cc66cc;
+    line-height: 1.4;
+    display: inline-block;
+  }
+
+  /* 组别介绍文字 */
+  .section p {
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 2;
+    padding: 0 0.5rem;
+  }
+
+  /* 活动内容样式 */
+  .activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .activity-item {
+    background: #fff0ff;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 100%;
+  }
+
+  .activity-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(204, 102, 204, 0.15);
+  }
+
+  .activity-title {
+    font-size: 5rem;
+    color: #993399;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .activity-title i {
+    font-size: 3rem;
+  }
+
+  .activity-desc {
+    color: #555;
+    line-height: 2;
+    margin: 0;
+    font-size: 2rem;
+    word-break: break-word;
+  }
+
+  /* 作品展示样式（突出音频视觉化呈现） */
+  .showcase {
+    margin-top: 3rem;
+  }
+
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    gap: 2rem;
+  }
+
+  .showcase-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
   }
 
-  .audio-card:hover .audio-info {
-    transform: translateY(8px);
+  .showcase-item:hover {
+    transform: translateY(-5px);
   }
 
-  .audio-name {
-    font-size: 1.6rem;
-    margin-bottom: 0.3rem;
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-
-  .core .audio-name {
-    background: linear-gradient(90deg, #4cc9f0, #87ceeb);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 12px rgba(76, 201, 240, 0.6);
-  }
-
-  .audio-style {
-    font-size: 0.95rem;
-    color: #b0d8e8;
-    margin-bottom: 0.8rem;
-    font-style: italic;
-  }
-
-  .audio-slogan {
-    font-size: 1.15rem;
-    color: #b0d8e8;
-    line-height: 1.6;
+  .showcase-img {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
     position: relative;
-    opacity: 0.85;
-    transition: opacity 0.3s ease;
-  }
-
-  .audio-card:hover .audio-slogan {
-    opacity: 1;
-  }
-
-  /* 创作者标识（突出擅长领域） */
-  .audio-badge {
-    position: absolute;
-    top: -18px;
-    right: 20px;
-    background: linear-gradient(90deg, #4cc9f0, #87ceeb);
-    color: #121826;
-    font-size: 0.95rem;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 0 18px rgba(76, 201, 240, 0.7);
-    z-index: 10;
-    animation: badgePulse 2.5s infinite;
-  }
-
-  @keyframes badgePulse {
-    0%, 100% { box-shadow: 0 0 18px rgba(76, 201, 240, 0.7); }
-    50% { box-shadow: 0 0 25px rgba(76, 201, 240, 0.9); }
-  }
-
-  /* 虚席以待样式（传递招募氛围） */
-  .vacant .audio-frame {
-    background-color: #1d2536;
+    background-color: #f9e6f9;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .vacant .placeholder {
-    text-align: center;
+  .showcase-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
   }
 
-  .vacant .placeholder i {
-    font-size: 5.5rem;
-    color: #354a66;
-    text-shadow: 0 0 25px rgba(255, 255, 255, 0.06);
-    animation: iconPulse 4.5s infinite;
-  }
-
-  @keyframes iconPulse {
-    0%, 100% { opacity: 0.7; transform: scale(1) rotate(0deg); }
-    50% { opacity: 1; transform: scale(1.15) rotate(5deg); }
-  }
-
-  .vacant .audio-name {
-    color: #8aabbe;
-  }
-
-  /* 背景装饰元素（模拟声音氛围） */
-  .bg-element {
+  /* 音频波形装饰元素 */
+  .audio-wave {
     position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(76, 201, 240, 0.08) 0%, transparent 70%);
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
     z-index: 1;
-    filter: blur(60px);
   }
 
-  .bg-element:nth-child(1) {
-    top: 15%;
-    left: -180px;
-    animation: floatBg 22s infinite;
+  .audio-wave span {
+    width: 4px;
+    background: #cc66cc;
+    border-radius: 2px;
+    animation: waveAnim 1.5s infinite ease-in-out;
   }
 
-  .bg-element:nth-child(2) {
-    bottom: 5%;
-    right: -120px;
-    animation: floatBg 28s infinite reverse;
+  .audio-wave span:nth-child(2n) {
+    height: 30%;
+    animation-delay: 0.2s;
   }
 
-  @keyframes floatBg {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-60px) rotate(12deg); }
+  .audio-wave span:nth-child(3n) {
+    height: 70%;
+    animation-delay: 0.4s;
   }
 
-  /* 响应式调整（适配不同屏幕） */
-  @media (max-width: 1024px) {
-    .hall-title {
-      font-size: 3.6rem;
-    }
-    .audio-frame {
-      height: 360px;
-    }
+  .audio-wave span:nth-child(4n) {
+    height: 50%;
+    animation-delay: 0.6s;
   }
 
+  @keyframes waveAnim {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0.6); }
+  }
+
+  .showcase-item:hover .showcase-img img {
+    transform: scale(1.05);
+  }
+
+  /* 作品类型标签 */
+  .showcase-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(153, 51, 153, 0.8);
+    color: white;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  .showcase-info {
+    padding: 1.5rem;
+    background: white;
+  }
+
+  .showcase-title {
+    font-size: 3rem;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .showcase-desc {
+    font-size: 2rem;
+    color: #666;
+    margin: 0;
+    line-height: 2;
+    word-break: break-word;
+  }
+
+  /* 响应式调整 */
   @media (max-width: 768px) {
-    .audio-grid {
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 4.5rem;
+    .group-name {
+      font-size: 2.5rem;
     }
-    .audio-frame {
-      height: 330px;
+    .section {
+      margin-bottom: 5rem;
     }
-  }
-
-  @media (max-width: 480px) {
-    .hall-title {
-      font-size: 2.9rem;
-    }
-    .audio-grid {
+    .showcase-grid {
       grid-template-columns: 1fr;
-      gap: 3.5rem;
     }
-    .audio-frame {
-      height: 310px;
+    .showcase-img {
+      height: 260px;
     }
   }
 </style>
 
-<div class="audio-hall">
-  <!-- 背景装饰元素（模拟声音氛围） -->
-  <div class="bg-element"></div>
-  <div class="bg-element"></div>
-
-  <!-- 页面标题（突出音声主题） -->
-  <div class="hall-header">
-    <h1 class="hall-title">声韵榜</h1>
-    <p class="hall-subtitle">以声音传递温度，以韵律治愈心灵——致敬音声组每一位创作者</p>
+<div class="audio-group-container">
+  <!-- 组别名称与宗旨 -->
+  <div class="group-header">
+    <h1 class="group-name">音声组</h1>
+    <p class="group-motto">宗旨：用声音演绎角色，以旋律连接心灵</p>
   </div>
 
-  <!-- 音声组创作册 -->
-  <div class="audio-grid">
-    <!-- 核心创作者1（配音担当） -->
-    <div class="audio-card core">
-      <div class="audio-badge">音声担当</div>
-      <div class="audio-frame">
-        <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761804592594-y87bu4l3-img_mhd0yr47_zly52o.jpg" alt="音声组 伊布叮叮" class="audio-img">
+  <!-- 组别介绍 -->
+  <div class="section">
+    <h2 class="section-title">关于音声组</h2>
+    <p>音声组是社团的“声音魔术师”，专注于二次元配音、翻唱与音效创作。无论是动漫角色配音、同人歌曲翻唱，还是广播剧制作、活动背景音乐剪辑，我们用声音赋予作品灵魂，用旋律传递二次元的情感。无论你是拥有独特声线的配音爱好者，还是擅长唱歌的音乐达人，都能在这里找到展示声音魅力的舞台。</p>
+    <p>我们的核心目标是：让声音成为连接次元的桥梁，同时为成员提供专业的声音训练与创作平台。组内定期开展配音技巧教学、声乐训练、作品录制等活动，与其他组别合作产出音视频作品，让每一段声音都能打动人心。</p>
+  </div>
+
+  <!-- 活动内容 -->
+  <div class="section">
+    <h2 class="section-title">日常活动</h2>
+    <div class="activities-list">
+      <div class="activity-item">
+        <h3 class="activity-title">
+          <i>🎤</i> 配音技巧工坊
+        </h3>
+        <p class="activity-desc">学习角色分析、语气控制、情感表达技巧，练习动漫名场面配音，从气息训练到声线转换，提升配音的专业度与感染力。</p>
       </div>
-      <div class="audio-info">
-        <h3 class="audio-name">伊布叮叮</h3>
-        <p class="audio-slogan">「让每一段声音，都成为能触碰心灵的温柔」</p>
+      <div class="activity-item">
+        <h3 class="activity-title">
+          <i>🎶</i> 翻唱录制教学
+        </h3>
+        <p class="activity-desc">教授录音设备使用、后期修音技巧，选择热门动漫歌曲进行翻唱，从音准调整到情感处理，制作高质量翻唱作品。</p>
+      </div>
+      <div class="activity-item">
+        <h3 class="activity-title">
+          <i>📻</i> 广播剧创作
+        </h3>
+        <p class="activity-desc">组队制作同人广播剧，分工负责配音、剧本改编、音效设计、后期合成，完整还原动漫角色对话与场景氛围。</p>
+      </div>
+      <div class="activity-item">
+        <h3 class="activity-title">
+          <i>🎧</i> 音效与BGM制作
+        </h3>
+        <p class="activity-desc">学习音效素材剪辑、背景音乐搭配，为社团视频、舞台剧、游戏活动制作专属音效，提升作品的听觉体验。</p>
       </div>
     </div>
-    <!-- 虚席以待1（待整理） -->
-    <div class="audio-card vacant">
-      <div class="audio-frame">
-        <div class="placeholder">
-          <i>🎙️</i>
+  </div>
+  <!-- 作品展示（音声作品视觉化呈现） -->
+  <div class="section">
+    <h2 class="section-title">音声作品</h2>
+    <div class="showcase">
+      <div class="showcase-grid">
+        <!-- 作品1：角色配音 -->
+        <div class="showcase-item">
+          <div class="showcase-img">
+            <span class="showcase-tag">角色配音</span>
+            <img src="https://picsum.photos/id/65/600/800" alt="动漫角色配音封面">
+            <div class="audio-wave">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">《经典动漫角色配音合集》</h3>
+            <p class="showcase-desc">包含5个热门动漫角色的经典台词配音，成员通过声线模仿与情感注入还原角色特质，发布于社团音声平台，播放量破千。</p>
+          </div>
+        </div>
+        <!-- 作品2：同人翻唱 -->
+        <div class="showcase-item">
+          <div class="showcase-img">
+            <span class="showcase-tag">同人翻唱</span>
+            <img src="https://picsum.photos/id/24/600/800" alt="动漫歌曲翻唱封面">
+            <div class="audio-wave">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">《二次元金曲翻唱集》</h3>
+            <p class="showcase-desc">收录3首经典动漫OP/ED翻唱，采用多轨录音制作，加入和声设计，后期进行混音处理，还原歌曲的热血与治愈感。</p>
+          </div>
+        </div>
+        <!-- 作品3：广播剧 -->
+        <div class="showcase-item">
+          <div class="showcase-img">
+            <span class="showcase-tag">广播剧</span>
+            <img src="https://picsum.photos/id/42/600/800" alt="同人广播剧封面">
+            <div class="audio-wave">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-title">《异世界咖啡馆》短篇广播剧</h3>
+            <p class="showcase-desc">原创同人广播剧，7名成员参与配音，包含场景音效与背景音乐设计，时长12分钟，讲述异世界来客的温馨故事，获社团年度最佳作品。</p>
+          </div>
         </div>
       </div>
-      <div class="audio-info">
-        <h3 class="audio-name">虚席以待</h3>
-        <p class="audio-style">期待你的声音</p>
-        <p class="audio-slogan">「声韵已起，等你加入谱写更多韵律」</p>
-      </div>
     </div>
- <!-- 虚席以待2（待整理） -->
-    <div class="audio-card vacant">
-      <div class="audio-frame">
-        <div class="placeholder">
-          <i>🎙️</i>
-        </div>
-      </div>
-      <div class="audio-info">
-        <h3 class="audio-name">虚席以待</h3>
-        <p class="audio-style">期待你的声音</p>
-        <p class="audio-slogan">「声韵已起，等你加入谱写更多韵律」</p>
-      </div>
-    </div>
+  </div>
+</div>

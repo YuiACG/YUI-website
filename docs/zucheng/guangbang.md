@@ -200,13 +200,13 @@ title: 技术组 | YUI动漫社
 <div class="tech-group-container">
   <!-- 组别名称与宗旨 -->
   <div class="group-header">
-    <h1 class="group-name">技术组</h1>
-    <p class="group-motto">宗旨：烙饼王，我当定了</p>
+    <h1 class="group-name">应援组</h1>
+    <p class="group-motto">应援组三要素：wota，甩手，长发</p>
   </div>
 
   <!-- 组别介绍 -->
   <div class="section">
-    <h2 class="section-title">关于技术组</h2>
+    <h2 class="section-title">关于应援组</h2>
     <p>应援组是社团活动的"气氛发动机"，负责为各类演出、比赛和活动打造热烈氛围。我们擅长将观众的热情转化为舞台上最耀眼的光芒。无论你是社牛还是社恐，只要有一颗热爱二次元的心，都能在这里找到属于自己的位置。</p>
     <p>我们的核心目标是：让每一场活动都充满感染力，让参与者感受到集体热爱的力量。应援组不仅是活动的助力者，更是情感的传递者，在这里可以学习wota，超绝甩手等技能，更能收获一群为共同热爱而努力的伙伴。</p>
   </div>
