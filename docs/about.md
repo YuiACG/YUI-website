@@ -16,10 +16,10 @@ title: 社团介绍 | YUI动漫社
 
   /* 页面容器 */
   .about-container {
-    max-width: 1600px; /* 适中容器宽度 */
+    max-width: 1600px;  /*适中容器宽度 */
     margin: 0 auto;
     padding: 2rem 5%;
-  }
+  } 
 
   /* 模块间距 */
   .section {
