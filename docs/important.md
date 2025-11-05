@@ -142,7 +142,8 @@ title: 活动情报 | YUI动漫社
   <div class="section">
     <h2 class="section-title">近期活动</h2>
     <div class="events-list">
-      <div class="event-card">
+      <div class="event-card" >
+      <a href="/activity/xingkong">
         <div class="event-img">
           <img src="https://pic.nwafu.xyz/images/639785b2839929c519e8fbfd0ad1554ac4242cc107d8b4876f3006f73ee15ace/1761728534646-q40v1jge-img_mhbrnvfv_5l20qh.jpg" alt="2025YUI动漫社星空音乐会">
         </div>
@@ -154,6 +155,7 @@ title: 活动情报 | YUI动漫社
           <span class="event-tag">表演</span>
           <span class="event-tag">市集</span>
         </div>
+      </a>
       </div>
     </div>
   </div>

@@ -405,17 +405,17 @@ title: 极客榜 | 技术组荣耀册
         <p class="tech-slogan">「以我哈躯烙大饼」</p>
       </div>
     </div>
-    <!-- 虚席以待1（待整理） -->
+    <!-- 核心技术人员2（堆史大王） -->
     <div class="tech-card vacant">
+      <div class="tech-badge">寄术大师</div>
       <div class="tech-frame">
         <div class="placeholder">
-          <i>💻</i>
+          <img src="https://pic.nwafu.xyz/images/dccbb03b94e341aeeeb4e4e40bab6f6882e20d435996853a9e930770bad055c3/1762348985859-g25mgpmz-img_mhm12zy2_brc22e.jpg" alt="技术组 酪鸭梨" class="tech-img">
         </div>
       </div>
       <div class="tech-info">
-        <h3 class="tech-name">虚席以待</h3>
-        <p class="tech-field">期待你的技术</p>
-        <p class="tech-slogan">「代码已就绪，等你一起解锁新功能」</p>
+        <h3 class="tech-name">酪鸭梨</h3>
+        <p class="tech-slogan">「你等我会我先糊点史你再提交」</p>
       </div>
     </div>
  <!-- 虚席以待2（待整理） -->
